@@ -12,4 +12,5 @@ function sumMix(x){
     return newArr.reduce((a,c) => a+c);
 }
 
+
 console.log(sumMix([9, 3, '7', '3']));
