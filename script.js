@@ -7,9 +7,9 @@
 function sumMix(x){
 
     console.log(x);
-    let newArr = x.map(n => parseInt(n))
+    let newArr = x.map(n => parseInt(n)) //converts to string
     console.log(newArr);
-    return newArr.reduce((a,c) => a+c);
+    return newArr.reduce((a,c) => a+c);// summation
 }
 
 
