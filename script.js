@@ -1,22 +1,12 @@
-// Can you find the needle in the haystack?
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
-// Write a function findNeedle() that takes an array full of junk but containing one "needle"
-
-// After your function finds the needle it should return a message (as a string) that says:
-
-// "found the needle at position " plus the index it found the needle, so:
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 
 
-function findNeedle(haystack) {
-    // return haystack.includes('needle');
-    if (haystack.includes('needle')){
-        let position = haystack.indexOf('needle')
-        return `found the needle at position ${position}`
-    }else{
-        return 'Not found'
-    }
+function squareSum(numbers){
+    if(numbers.length === 0) return 0;
+    let square = numbers.map(n => n*n);
+    return square.reduce((a,c) => a+c);
 }
 
-
-
-console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk','needle', 'randomJunk']))
+console.log((squareSum([1,2])))
