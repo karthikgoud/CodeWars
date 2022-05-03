@@ -1,22 +1,15 @@
-// Can you find the needle in the haystack?
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 
-// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+// Return your answer as a number.
 
-// After your function finds the needle it should return a message (as a string) that says:
+// (sumMix([9, 3, '7', '3']), 22)
 
-// "found the needle at position " plus the index it found the needle, so:
+function sumMix(x){
 
-
-function findNeedle(haystack) {
-    // return haystack.includes('needle');
-    if (haystack.includes('needle')){
-        let position = haystack.indexOf('needle')
-        return `found the needle at position ${position}`
-    }else{
-        return 'Not found'
-    }
+    console.log(x);
+    let newArr = x.map(n => parseInt(n))
+    console.log(newArr);
+    return newArr.reduce((a,c) => a+c);
 }
 
-
-
-console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk','needle', 'randomJunk']))
+console.log(sumMix([9, 3, '7', '3']));
